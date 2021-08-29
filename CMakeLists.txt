@@ -41,6 +41,16 @@ target_include_directories(EAStdC PUBLIC include)
 #-------------------------------------------------------------------------------------------
 # Dependencies
 #-------------------------------------------------------------------------------------------
+if (NOT TARGET EABase)
+    add_subdirectory(test/packages/EABase)
+endif()
+if (NOT TARGET EAAssert)
+    add_subdirectory(test/packages/EAAssert)
+endif()
+if (NOT TARGET EAThread)
+    add_subdirectory(test/packages/EAThread)
+endif()
+
 target_link_libraries(EAStdC EABase)
 target_link_libraries(EAStdC EAAssert)
 target_link_libraries(EAStdC EAThread)
