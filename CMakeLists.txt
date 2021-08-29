@@ -45,3 +45,8 @@ target_link_libraries(EAStdC EABase)
 target_link_libraries(EAStdC EAAssert)
 target_link_libraries(EAStdC EAThread)
 
+#-------------------------------------------------------------------------------------------
+# Installation
+#-------------------------------------------------------------------------------------------
+install(TARGETS EAStdC DESTINATION lib)
+install(DIRECTORY include/EAStdC DESTINATION include)
